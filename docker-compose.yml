@@ -11,6 +11,8 @@ services:
       - POSTGRES_DB=banco
     networks:
       - valnei-net
+    volumes:
+      - db-data:/var/lib/postgresql
 
   PGADMIN:
     image: dpage/pgadmin4
@@ -22,6 +24,9 @@ services:
       - PGADMIN_DEFAULT_PASSWORD=123456
     networks:
       - valnei-net
+
+volumes:
+  db-data:
 
 networks:
   valnei-net:
