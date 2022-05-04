@@ -24,9 +24,13 @@ services:
       - PGADMIN_DEFAULT_PASSWORD=123456
     networks:
       - valnei-net
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+    
 
 volumes:
   db-data:
+  pgadmin:
 
 networks:
   valnei-net:
@@ -34,4 +38,4 @@ networks:
   
 #Configuração do host no pgadmin
 #host: host.docker.internal
-#dentro do wsl2 digitar hostname -I  172.17.0.1
+#dentro do wsl2 digitar hostname -I  172.17.0.1 
