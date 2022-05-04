@@ -12,7 +12,7 @@ services:
     networks:
       - valnei-net
     volumes:
-      - db-data:/var/lib/postgresql
+      - db-data:/var/lib/postgresql/data
 
   PGADMIN:
     image: dpage/pgadmin4
@@ -34,3 +34,4 @@ networks:
   
 #Configuração do host no pgadmin
 #host: host.docker.internal
+#dentro do wsl2 digitar hostname -I  172.17.0.1
